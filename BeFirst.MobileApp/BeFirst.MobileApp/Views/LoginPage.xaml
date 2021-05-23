@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:BeFirst.MobileApp.ViewModels"
+             BackgroundColor="Black"
+             x:Class="BeFirst.MobileApp.Views.LoginPage" >
+
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
+            <Label Text="BeFirst"
+                   FontSize="40"
+                   TextColor="Teal"  
+                   Padding="50"
+               HorizontalOptions="Center"
+                  
+            />
+            <Label Text="Korisničko ime :"
+                   FontSize="Medium"
+                   TextColor="Teal"                
+                  
+            />
+            <Entry Text="{Binding Username}" Placeholder = "Korisničko ime"></Entry>
+            <Label Text="Lozinka :"
+                   FontSize="Medium"
+                   TextColor="Teal"  
+                 
+                  
+            />
+            <Entry Text="{Binding Password}" Placeholder = "Lozinka"></Entry>
+            <Button  Text="Prijavi se" BackgroundColor="LightGray"  Command="{Binding LoginCommand}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    

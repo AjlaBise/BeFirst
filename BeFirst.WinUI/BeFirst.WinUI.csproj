@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71761FF1-A663-4FC0-A618-8D70D4208B38}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BeFirst.WinUI</RootNamespace>
+    <AssemblyName>BeFirst.WinUI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Flurl, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.3.0.2\lib\net461\Flurl.dll</HintPath>
+    </Reference>
+    <Reference Include="Flurl.Http, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.Http.3.2.0\lib\net461\Flurl.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APIService.cs" />
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPocetnaAdministrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPocetnaAdministrator.Designer.cs">
+      <DependentUpon>frmPocetnaAdministrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPocetnaUposlenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPocetnaUposlenik.Designer.cs">
+      <DependentUpon>frmPocetnaUposlenik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internet\frmDodajInternet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internet\frmDodajInternet.Designer.cs">
+      <DependentUpon>frmDodajInternet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internet\frmUpdateDeleteInternet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internet\frmUpdateDeleteInternet.Designer.cs">
+      <DependentUpon>frmUpdateDeleteInternet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internet\UCInternet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internet\UCInternet.Designer.cs">
+      <DependentUpon>UCInternet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Izvještaji\frmIzvjestaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izvještaji\frmIzvjestaj.Designer.cs">
+      <DependentUpon>frmIzvjestaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Izvještaji\UCIzvjestaji.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Izvještaji\UCIzvjestaji.Designer.cs">
+      <DependentUpon>UCIzvjestaji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\frmDodajKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\frmDodajKorisnika.Designer.cs">
+      <DependentUpon>frmDodajKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\frmPregledDetalja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\frmPregledDetalja.Designer.cs">
+      <DependentUpon>frmPregledDetalja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\frmUpdateDeleteKorisnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\frmUpdateDeleteKorisnik.Designer.cs">
+      <DependentUpon>frmUpdateDeleteKorisnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\UCKorisnici.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Korisnici\UCKorisnici.Designer.cs">
+      <DependentUpon>UCKorisnici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\UC_PregledKorisnika_.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Korisnici\UC_PregledKorisnika_.Designer.cs">
+      <DependentUpon>UC_PregledKorisnika_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oprema\frmDodajOpremu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oprema\frmDodajOpremu.Designer.cs">
+      <DependentUpon>frmDodajOpremu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oprema\frmUpdateDeleteOprema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oprema\frmUpdateDeleteOprema.Designer.cs">
+      <DependentUpon>frmUpdateDeleteOprema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oprema\UCOprema.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Oprema\UCOprema.Designer.cs">
+      <DependentUpon>UCOprema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paketi\frmDodajPaket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paketi\frmDodajPaket.Designer.cs">
+      <DependentUpon>frmDodajPaket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paketi\frmUpdateDeletePaket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paketi\frmUpdateDeletePaket.Designer.cs">
+      <DependentUpon>frmUpdateDeletePaket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paketi\UCPaketi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Paketi\UCPaketi.Designer.cs">
+      <DependentUpon>UCPaketi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ponude\frmDodajPonudu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ponude\frmDodajPonudu.Designer.cs">
+      <DependentUpon>frmDodajPonudu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ponude\frmUpdateDeletePonuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ponude\frmUpdateDeletePonuda.Designer.cs">
+      <DependentUpon>frmUpdateDeletePonuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ponude\UCPonuda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ponude\UCPonuda.Designer.cs">
+      <DependentUpon>UCPonuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCPocetna.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPocetna.Designer.cs">
+      <DependentUpon>UCPocetna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPocetnaUposlenik.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPocetnaUposlenik.Designer.cs">
+      <DependentUpon>UCPocetnaUposlenik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uposlenici\frmDodajUposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uposlenici\frmDodajUposlenika.Designer.cs">
+      <DependentUpon>frmDodajUposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uposlenici\frmUpdateDeleteUposlenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uposlenici\frmUpdateDeleteUposlenik.Designer.cs">
+      <DependentUpon>frmUpdateDeleteUposlenik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uposlenici\UCUposlenici.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uposlenici\UCUposlenici.Designer.cs">
+      <DependentUpon>UCUposlenici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zahtjevi\frmDodajOdgovor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zahtjevi\frmDodajOdgovor.Designer.cs">
+      <DependentUpon>frmDodajOdgovor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zahtjevi\UCZahtjevi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Zahtjevi\UCZahtjevi.Designer.cs">
+      <DependentUpon>UCZahtjevi.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPocetnaAdministrator.resx">
+      <DependentUpon>frmPocetnaAdministrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPocetnaUposlenik.resx">
+      <DependentUpon>frmPocetnaUposlenik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internet\frmDodajInternet.resx">
+      <DependentUpon>frmDodajInternet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internet\frmUpdateDeleteInternet.resx">
+      <DependentUpon>frmUpdateDeleteInternet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internet\UCInternet.resx">
+      <DependentUpon>UCInternet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izvještaji\frmIzvjestaj.resx">
+      <DependentUpon>frmIzvjestaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izvještaji\UCIzvjestaji.resx">
+      <DependentUpon>UCIzvjestaji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\frmDodajKorisnika.resx">
+      <DependentUpon>frmDodajKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\frmPregledDetalja.resx">
+      <DependentUpon>frmPregledDetalja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\frmUpdateDeleteKorisnik.resx">
+      <DependentUpon>frmUpdateDeleteKorisnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\UCKorisnici.resx">
+      <DependentUpon>UCKorisnici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\UC_PregledKorisnika_.resx">
+      <DependentUpon>UC_PregledKorisnika_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oprema\frmDodajOpremu.resx">
+      <DependentUpon>frmDodajOpremu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oprema\frmUpdateDeleteOprema.resx">
+      <DependentUpon>frmUpdateDeleteOprema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oprema\UCOprema.resx">
+      <DependentUpon>UCOprema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paketi\frmDodajPaket.resx">
+      <DependentUpon>frmDodajPaket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paketi\frmUpdateDeletePaket.resx">
+      <DependentUpon>frmUpdateDeletePaket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paketi\UCPaketi.resx">
+      <DependentUpon>UCPaketi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ponude\frmDodajPonudu.resx">
+      <DependentUpon>frmDodajPonudu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ponude\frmUpdateDeletePonuda.resx">
+      <DependentUpon>frmUpdateDeletePonuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ponude\UCPonuda.resx">
+      <DependentUpon>UCPonuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UCPocetna.resx">
+      <DependentUpon>UCPocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPocetnaUposlenik.resx">
+      <DependentUpon>UCPocetnaUposlenik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uposlenici\frmDodajUposlenika.resx">
+      <DependentUpon>frmDodajUposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uposlenici\frmUpdateDeleteUposlenik.resx">
+      <DependentUpon>frmUpdateDeleteUposlenik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uposlenici\UCUposlenici.resx">
+      <DependentUpon>UCUposlenici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zahtjevi\frmDodajOdgovor.resx">
+      <DependentUpon>frmDodajOdgovor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zahtjevi\UCZahtjevi.resx">
+      <DependentUpon>UCZahtjevi.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BeFirst.Models\BeFirst.Models.csproj">
+      <Project>{1394CFB6-3E8E-474D-9554-D4556F5AC8C9}</Project>
+      <Name>BeFirst.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

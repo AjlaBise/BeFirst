@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:BeFirst.MobileApp.ViewModels"
+             x:Class="BeFirst.MobileApp.Views.OdgovoriDetalji">
+
+    <ContentPage.BindingContext>
+        <vm:OdgovoriDetaljiViewModel></vm:OdgovoriDetaljiViewModel>
+    </ContentPage.BindingContext>
+
+    <ListView ItemsSource="{Binding OdgovorList}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout>
+                        <Label Text="Naslov:" FontSize="Small" />
+                        <Label Text="{Binding Naslov}" FontSize="Caption" TextColor="Gray"/>
+                        <Label Text="Opis:" FontSize="Small" />
+                        <Label Text="{Binding Opis}"  FontSize="Caption" TextColor="Gray"/>
+                        <Label Text="Odgovor:" FontSize="Small" />
+                        <Label Text="{Binding Odgovor}"  FontSize="Caption"/>
+                    </StackLayout>
+                </ViewCell>
+
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

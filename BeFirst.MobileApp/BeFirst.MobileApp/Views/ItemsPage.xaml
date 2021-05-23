@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:BeFirst.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="BeFirst.MobileApp.Views.ItemsPage"
+             Title="{Binding Title}"
+             x:Name="BrowseItemsPage">
+
+    <ContentPage.BindingContext>
+        <vm:PaketViewModel></vm:PaketViewModel>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="#2296f2">
+                <Label Text="Dobrodošli"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                FontAttributes="Bold" TextColor="White"
+                FontSize="Title"/>
+
+            </StackLayout>
+
+            <Label Text="Slični paketi"></Label>
+            <StackLayout>
+                <ListView ItemsSource="{Binding SlicniPaketi}" ItemSelected="ListView_ItemSelected" IsPullToRefreshEnabled="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <StackLayout Padding="10" Orientation="Horizontal">
+                                        <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                                            <StackLayout>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Label Grid.Column="0" Text="Internet:"  FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                                    <Label Grid.Column="1" TextColor="#59acff" Text="{Binding InternetId}" LineBreakMode="NoWrap" HorizontalTextAlignment="Start"
+                                                      Style="{DynamicResource ListItemDetailTextStyle}" FontSize="14"/>
+                                                </Grid>
+                                            </StackLayout>
+
+                                            <StackLayout>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Label Grid.Column="0" Text="Ugovor:"  FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                                    <Label Grid.Column="1" TextColor="#59acff" Text="{Binding UgovorId}" LineBreakMode="NoWrap" HorizontalTextAlignment="Start"
+                                                      Style="{DynamicResource ListItemDetailTextStyle}" FontSize="14"/>
+                                                </Grid>
+                                            </StackLayout>
+                                            <StackLayout>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Label Grid.Column="0" Text="Kablovska televizija:"  FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                                    <Label Grid.Column="1" TextColor="#59acff" Text="{Binding CaTv}" LineBreakMode="NoWrap" HorizontalTextAlignment="Start"
+                                                      Style="{DynamicResource ListItemDetailTextStyle}" FontSize="14"/>
+                                                </Grid>
+                                            </StackLayout>
+                                            <StackLayout>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Label Grid.Column="0" Text="Paketi:"  FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                                    <Label Grid.Column="1" TextColor="#59acff" Text="{Binding PaketNamjenaId}" LineBreakMode="NoWrap" HorizontalTextAlignment="Start"
+                                                      Style="{DynamicResource ListItemDetailTextStyle}" FontSize="14"/>
+                                                </Grid>
+                                            </StackLayout>
+
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <BoxView HeightRequest="5" BackgroundColor="#59acff" HorizontalOptions="FillAndExpand" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Label Text="Sniženi paketi"></Label>
+                <ListView ItemsSource="{Binding SnizeniPaketi}" ItemSelected="ListView_ItemSelected" IsPullToRefreshEnabled="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <StackLayout Padding="10" Orientation="Horizontal">
+                                        <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                                            <StackLayout>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Label Grid.Column="0" Text="Internet:"  FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                                    <Label Grid.Column="1" TextColor="#59acff" Text="{Binding InternetId}" LineBreakMode="NoWrap" HorizontalTextAlignment="Start"
+                                                      Style="{DynamicResource ListItemDetailTextStyle}" FontSize="14"/>
+                                                </Grid>
+                                            </StackLayout>
+
+                                            <StackLayout>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Label Grid.Column="0" Text="Ugovor:"  FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                                    <Label Grid.Column="1" TextColor="#59acff" Text="{Binding UgovorId}" LineBreakMode="NoWrap" HorizontalTextAlignment="Start"
+                                                      Style="{DynamicResource ListItemDetailTextStyle}" FontSize="14"/>
+                                                </Grid>
+                                            </StackLayout>
+                                            <StackLayout>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Label Grid.Column="0" Text="Kablovska televizija:"  FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                                    <Label Grid.Column="1" TextColor="#59acff" Text="{Binding CaTv}" LineBreakMode="NoWrap" HorizontalTextAlignment="Start"
+                                                      Style="{DynamicResource ListItemDetailTextStyle}" FontSize="14"/>
+                                                </Grid>
+                                            </StackLayout>
+                                            <StackLayout>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Label Grid.Column="0" Text="Paketi:"  FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                                    <Label Grid.Column="1" TextColor="#59acff" Text="{Binding PaketNamjenaId}" LineBreakMode="NoWrap" HorizontalTextAlignment="Start"
+                                                      Style="{DynamicResource ListItemDetailTextStyle}" FontSize="14"/>
+                                                </Grid>
+                                            </StackLayout>
+
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <BoxView HeightRequest="5" BackgroundColor="#59acff" HorizontalOptions="FillAndExpand" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

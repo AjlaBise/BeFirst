@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BeFirst.MobileApp.Views.RadniNalogPage">
+
+    <ContentPage.Content>
+        <StackLayout Padding="5" VerticalOptions="CenterAndExpand">
+            <Label Text="Kreiraj radni nalog:" FontAttributes="Bold"  FontSize="Title" HorizontalOptions="CenterAndExpand"></Label>
+            <!--<Label Text="{Binding test}"></Label>-->
+
+
+            <Label HorizontalOptions="Center" FontAttributes="Bold" Text="Ime klijenta:" ></Label>
+            <Entry VerticalOptions="Center" WidthRequest="400" Text="{Binding selectedIme}"></Entry>
+
+            <Label HorizontalOptions="Center" FontAttributes="Bold" Text="Prezime klijenta:" ></Label>
+            <Entry VerticalOptions="Center" WidthRequest="400" Text="{Binding selectedPrezime}"></Entry>
+
+            <Label HorizontalOptions="Center" FontAttributes="Bold" Text="Opis izvršenog posla:" ></Label>
+            <Entry VerticalOptions="Center" WidthRequest="400" Text="{Binding selectedOpisIzvrsenogPosla}"></Entry>
+
+            <Label HorizontalOptions="Center" FontAttributes="Bold" Text="Opis prijavljenog posla:" ></Label>
+            <Entry VerticalOptions="Center" WidthRequest="400" Text="{Binding selectOpisPrijavljenogPosla}"></Entry>
+
+            <Label HorizontalOptions="Center" FontAttributes="Bold" Text="Adresa:" ></Label>
+            <Entry VerticalOptions="Center" WidthRequest="400" Text="{Binding selectedAdresa}"></Entry>
+
+
+            <Label HorizontalOptions="Center" FontAttributes="Bold" Text="Unesite datum:" ></Label>
+            <DatePicker Date="{Binding selectedDatum}" Format="dd-MM-yyyy" WidthRequest="400"></DatePicker>
+
+
+            <Label HorizontalOptions="Center" FontAttributes="Bold" Text="Izaberite uposlenika:" ></Label>
+            <Picker ItemsSource="{Binding UposlenikList}" SelectedItem="{Binding selectedUposlenik}" ItemDisplayBinding="{Binding Ime}"    
+                    VerticalOptions="Center" WidthRequest="400"></Picker>
+
+            <Label HorizontalOptions="Center" FontAttributes="Bold" Text="Izaberite opremu:" ></Label>
+            <Picker ItemsSource="{Binding OpremaList}" SelectedItem="{Binding selectedOprema}" ItemDisplayBinding="{Binding Naziv}"
+                        VerticalOptions="Center" WidthRequest="400"></Picker>
+
+            <Button BackgroundColor="Green" TextColor="White" Clicked="Button_Clicked" HorizontalOptions="FillAndExpand" Font="Bold,17" Text="Kreiraj nalog" Command="{Binding SaveCommand}"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
