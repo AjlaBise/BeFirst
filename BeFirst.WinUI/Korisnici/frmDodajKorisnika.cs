@@ -134,7 +134,7 @@ namespace BeFirst.WinUI.Korisnici
         private void txtBrojTelefona_Validating(object sender, CancelEventArgs e)
         {
             string telefon = txtBrojTelefona.Text;
-            Regex regex = new Regex(@"^[1-9]");
+            Regex regex = new Regex(@"^\d+$");
             Match match = regex.Match(telefon);
 
             if (!match.Success)
